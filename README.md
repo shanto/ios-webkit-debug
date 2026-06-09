@@ -44,7 +44,7 @@ Additionally, fixes and optimizations from past projects — such as [ios-safari
 
 1. Ensure `git`, `npm`, and `node` are installed and working correctly in your shell.
 
-2. Clone this repository and open a terminal (e.g. PowerShell) inside the cloned folder.
+2. Clone this repository and open a terminal inside the cloned folder.
 
 3. Install dependencies:
 
@@ -54,8 +54,8 @@ Additionally, fixes and optimizations from past projects — such as [ios-safari
 
 4. Run the bootstrap script:
 
-   ```powershell
-   .\bootstrap.ps1 -Tag wpewebkit-2.49.3
+   ```bash
+   npm run prepare -- --tag wpewebkit-2.50.6
    ```
 
    (Performs a sparse checkout of the WebKit repository and initializes submodules)
@@ -63,7 +63,7 @@ Additionally, fixes and optimizations from past projects — such as [ios-safari
 5. Build the optimized Inspector UI from WebKit sources:
 
    ```bash
-   node build.js
+   npm run build
    ```
 
    Example output:
@@ -81,7 +81,7 @@ Additionally, fixes and optimizations from past projects — such as [ios-safari
 6. Start the web server and launch `ios_webkit_debug_proxy`:
 
    ```bash
-   node serve.js -v 18.4 -b cromite
+   npm run serve -- -v 26.0 -b cromite
    ```
 
    Example output:
@@ -101,7 +101,7 @@ Additionally, fixes and optimizations from past projects — such as [ios-safari
 7. For all available options, see the help command:
 
    ```bash
-   node serve.js --help
+   npm run serve -- --help
    ```
 
    ```

@@ -1,5 +1,5 @@
 param (
-    [string]$Tag = "wpewebkit-2.49.3"
+    [string]$Tag = "wpewebkit-2.50.6"
 )
 Write-Host "Checking out Webkit@$Tag. If another tag is preferred, then pass it as $0 -Tag <tag-spec>"
 $env:PATH = ".\node_modules\.bin;$env:PATH"

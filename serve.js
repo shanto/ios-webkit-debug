@@ -30,8 +30,9 @@ let browser = undefined;
 proto_dirs = fs.readdirSync(PROTO_DIR).reverse();
 
 const argv = yargs(process.argv.slice(2))
-	.usage("Usage: $0 [-v 18.4] [-p 9220] [-t 4]")
+	.usage("Usage: $0 [-v 26.0] [-p 9220] [-t 4]")
 	.option("proto", {
+		type: "string",
 		alias: ["v"],
 		describe: "iOS Protocol Version",
 		choices: proto_dirs,
@@ -83,7 +84,7 @@ if (cluster.isPrimary) {
 		console.error(`ERROR: ${reason.message}. Install or make it available in PATH before running the server.`);
 		console.log(
 			`Or, run below command while keeping this server running:
-			${PROXY_BIN} -f ${frontend}`.replace(/\t\t/, "")
+			${PROXY_BIN} -f ${frontend}`.replace(/\t\t/, ""),
 		);
 	}
 

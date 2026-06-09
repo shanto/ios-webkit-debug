@@ -27,15 +27,12 @@
 		"esbuild-plugin-inline-image": "^0.0.9",
 		"esprima-next": "^6.0.3",
 		"which": "^5.0.0",
-		"yargs": "^18.0.0"
+		"yargs": "=17.7.2",
+		"zx": "^8.8.5"
 	},
 	"scripts": {
-		"bootstrap": "pwsh bootstrap.ps1",
+		"prepare": "node bootstrap.js",
 		"build": "node build.js",
-		"serve": "node serve.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"devDependencies": {
-		"rimraf": "^6.0.1"
+		"serve": "node serve.js"
 	}
 }
